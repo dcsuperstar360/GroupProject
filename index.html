@@ -13,6 +13,15 @@
                }
             }
          //-->
+         .icons {
+    float: left;
+    margin: 5px;
+    padding: 15px;
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+} 
+</style>
       </script>
 </head>
 <link rel="stylesheet" href="styles.css">
@@ -25,6 +34,7 @@ function myFunction() {
   // https://<your-firebase-app>.firebaseio.com/SOCIAL-MEDIA-TRACKER/milk/name
       "name": "Milk",
 </script>
+    <div class="icons">
 <input type="number" min="0" max="100">
 <p>Twitter</p><img height="175px" src="Twitter.png" alt="Twitter">
 <input type="number" min="0" max="100">
@@ -37,6 +47,7 @@ function myFunction() {
        <form>
          <input type="button" value="Submit" onclick="getConfirmation();" />
       </form>
+    </div>
   <h2>How long are you on your social media? Enter your minutes in the boxes!</h2>
       
   <body>
