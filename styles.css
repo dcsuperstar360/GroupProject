@@ -1,0 +1,9 @@
+html,h1,p{
+ background-color:blue;
+font-family: cursive;
+    color: white;
+    
+}
+p, img, input {
+    display: inline;
+}
