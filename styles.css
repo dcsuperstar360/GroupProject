@@ -1,8 +1,18 @@
-html,h1,p{
- background-color:blue;
+html{
+background: rgba(73,155,234,1);
+background: -moz-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(0,74,153,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(73,155,234,1)), color-stop(100%, rgba(0,74,153,1)));
+background: -webkit-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(0,74,153,1) 100%);
+background: -o-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(0,74,153,1) 100%);
+background: -ms-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(0,74,153,1) 100%);
+background: linear-gradient(to right, rgba(73,155,234,1) 0%, rgba(0,74,153,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#004a99', GradientType=1 );
+    
+    
+}
+p,h1,h2{
 font-family: sans-serif;
     color: white;
-    
 }
          .icons {
     float: left;
