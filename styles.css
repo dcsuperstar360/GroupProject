@@ -4,6 +4,13 @@ font-family: sans-serif;
     color: white;
     
 }
+         .icons {
+    float: left;
+    margin: 5px;
+    padding: 15px;
+    width: 100px;
+    height: 100px;
+} 
 p, img, input {
     display: inline;
 }
