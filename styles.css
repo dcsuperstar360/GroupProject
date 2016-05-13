@@ -10,7 +10,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', end
     
     
 }
-p,h1,h2{
+h5 {
+      border: solid 2px white; 
+      font-size: 20px;
+
+}
+label {
+    color: white;
+}
+h1 {
+  border-bottom: solid 2px white;  
+}
+p,h1,h2,h4,h5{
 font-family: sans-serif;
     color: white;
 }

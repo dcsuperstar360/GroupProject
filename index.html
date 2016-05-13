@@ -25,36 +25,46 @@
 function myFunction() {
     document.getElementById("myCheck").click(); // Click on the checkbox
 }
-    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-  
+
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no; target-densityDpi=device-dpi" />
 </script>
-  <h2>How long are you on your social media? Enter your minutes in the boxes!</h2>
+  <h2>How long are you on your social media? Enter your minutes in the boxes! Please put in a value for each box, even if you don't use that app.</h2>
     <div class="icons">
+   
     <form id="social-media">
 
-<p>Twitter</p><img height="175px" src="Twitter.png" alt="Twitter">
-<input id="totaltwitter1" placeholder="Minutes" type="number" min="0" max="100">
-<p>Instagram</p><img height="175px" src="Instagram.png" alt="Twitter">
+<img height="175px" src="Twitter.png" alt="Twitter"><label for="totaltwitter">Twitter</label>
+<input id="totaltwitter" placeholder="Minutes" type="number" min="0" max="100">
+<img height="175px" src="Instagram.png" alt="Instagram"><label for="totalinstagram">Instagram</label>
 <input id="totalinstagram" placeholder="Minutes" type="number" min="0" max="100">
-<p>Snapchat</p><img height="175px" src="Snapchat.png" alt="Twitter">
+<img height="175px" src="Snapchat.png" alt="Snapchat"><label for="totalsnapchat">Snapchat</label>
 <input id="totalsnapchat" placeholder="Minutes" type="number" min="0" max="100">
-<p>Facebook</p><img height="175px" src="Facebook.png" alt="Twitter">
+<img height="175px" src="Facebook.png" alt="Facebook"><label for="totalfacebook">Facebook</label>
 <input id="totalfacebook" placeholder="Minutes" type="number" min="0" max="100">
-    <p>Other</p><img height="175px" src="Other.png" alt="Twitter">
-<input id="totalfacebook" placeholder="Minutes" type="number" min="0" max="100">
-     </form>
+<img height="175px" src="Other.png" alt="Other"><label for="totalother">Other</label>
+<input id="totalother" placeholder="Minutes" type="number" min="0" max="100">
+     
       
-       <form>
-         <input style="width:100px; height:50px;" type="button" value="Submit" onclick="location.href='results.html'" />
+       
+         <input style="width:100px; height:50px;" type="submit"></input>
       </form>
-    </div>
+      
+<h5>Overall time spent on Twitter:</h5><p id="totalt"></p>
+<br>
+<h5>Overall time spent on Instagram:</h5><p id="totali"></p>
+<br>
+<h5>Overall time spent on Snapchat:</h5><p id="totals"></p>
+<br>
+<h5>Overall time spent on Facebook:</h5><p id="totalf"></p>
+<br>
+<h5>Overall time spent on Other:</h5><p id="totalo"></p>
+    
     </div>
       
   <body>
-      <script src="script.js"></script>
-      <script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script>
 
-    
+    <script   src="https://code.jquery.com/jquery-1.12.2.js"   integrity="sha256-VUCyr0ZXB5VhBibo2DkTVhdspjmxUgxDGaLQx7qb7xY="   crossorigin="anonymous"></script>
+		<script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+		<script src="script.js"></script>
 </body>
 </html>

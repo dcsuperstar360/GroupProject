@@ -1,39 +1,52 @@
+/*global $*/
+/*global Firebase*/
+
 $(document).ready(function() {
-	console.log("Loaded");	
-    var Firebase = require("firebase")
-    var fbref = new Firebase("htts://social-media-tracker.firebaseio.com/");
-    
-});
+	
+	var fbRef = new Firebase("https://sweltering-inferno-8062.firebaseio.com");
+	
     $('#social-media').submit(function(e) {
 		e.preventDefault();
+		
     	var totaltwitter = parseInt($('#totaltwitter').val());
 		var totalfacebook = parseInt($('#totalfacebook').val());
 		var totalinstagram = parseInt($('#totalinstagram').val());
         var totalsnapchat = parseInt($('#totalsnapchat').val());
-        	var answer = {
+        var totalother = parseInt($('#totalother').val());
+        
+        var answer = {
 			totaltwitter: totaltwitter,
 			totalfacebook: totalfacebook,
 			totalinstagram: totalinstagram,
-                totalsnapchat: totalsnapchat
+            totalsnapchat: totalsnapchat,
+            totalother: totalother
 		}
-        fbRef.child('answers').push(answer);
+		
+        fbRef.child('total').push(answer);
     });
-var p = $('p#totalinstagram');
-p.replaceWith('id="totalinstagram' + p.html() + '>');
-});
-var p = $('p#totalfacebook');
-p.replaceWith('id="totalfacebook' + p.html() + '>');
-});
-var p = $('p#totalsnapchat');
-p.replaceWith('id="totalsnapchat' + p.html() + '>');
-});
-var p = $('p#totaltwitter');
-p.replaceWith('id="totaltwitter1' + p.html() + '>');
-});
-    	fbRef.child('answers').on('child_added', function(snap) {
-		var answer = snap.val();
-               
-            }" />
-            
-            
+    
+    var totalt = 0;
+    var totalf = 0;
+    var totali = 0;
+    var totals = 0;
+    var totalo = 0;
+    
+    fbRef.child('total').on('child_added', function(snap) {
+        var answer = snap.val();
+        
+        totalt = totalt + answer.totaltwitter;
+		totalf = totalf + answer.totalfacebook;
+		totali = totali + answer.totalinstagram;
+        totals = totals + answer.totalsnapchat;
+        totalo = totalo + answer.totalother;
+        
+        $('#totalt').text(totalt);
+        $('#totalf').text(totalf);
+        $('#totali').text(totali);
+        $('#totals').text(totals);
+        $('#totalo').text(totalo);
+    });
 
+            
+            
+});
